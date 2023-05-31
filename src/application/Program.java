@@ -5,11 +5,9 @@ import boardgame.Position;
 public class Program {
 
 	public static void main(String[] args) {
-
 		
-		Position post = new Position (3, 4);
+		Board board = new Board(8, 8);
 		
-		System.out.println(post);
 	}
 
 }
