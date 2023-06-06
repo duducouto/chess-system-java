@@ -2,7 +2,6 @@ package chess.pieces;
 
 import boardgame.Board;
 import boardgame.Position;
-import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.Color;
 
@@ -12,8 +11,6 @@ public class Knight extends ChessPiece {
 		super(board, color);
 		// TODO Auto-generated constructor stub
 	}
-
-	private ChessMatch chessMatch;
 	
 	@Override
 	public String toString() {
@@ -23,11 +20,6 @@ public class Knight extends ChessPiece {
 	private boolean canMove(Position position) {
 		ChessPiece p = (ChessPiece)getBoard().piece(position);
 		return p == null || p.getColor() != getColor();
-	}
-	
-	private boolean testRookCastling(Position position) {
-		ChessPiece p = (ChessPiece)getBoard().piece(position);
-		return p != null && p instanceof Rook && p.getColor() == getColor() && p.getMoveCount() == 0;
 	}
 	
 	@Override
