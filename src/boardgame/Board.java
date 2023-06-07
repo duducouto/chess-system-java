@@ -15,12 +15,12 @@ public class Board {
 		pieces = new Piece[rows][columns];
 	}
 
-	public int getColumns() {
-		return columns;
-	}
-
 	public int getRows() {
 		return rows;
+	}
+
+	public int getColumns() {
+		return columns;
 	}
 	
 	public Piece piece(int row, int column) {
@@ -59,7 +59,7 @@ public class Board {
 	}
 	
 	private boolean positionExists(int row, int column) {
-		return row >= 0 && row < rows && column >= 0 && column < columns;	
+		return row >= 0 && row < rows && column >= 0 && column < columns;
 	}
 	
 	public boolean positionExists(Position position) {
